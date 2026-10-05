@@ -37,13 +37,7 @@
     font-style: normal;
     font-display: swap;
 }
-@font-face {
-    font-family: "space-grotesk";
-    src: url(../asset/fonts/space-grotesk-v22-latin-500.woff2);
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
-}
+
 @font-face {
     font-family: "space-grotesk";
     src: url(../asset/fonts/space-grotesk-v22-latin-600.woff2);
