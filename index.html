@@ -10,10 +10,10 @@
 
 <body>
     <header>
-        <!-- logo retour à l'accueil -->
+        <!-- logo: back to home -->
         <a href="index.html"><img src="asset/image/logo/web-2-risk-web-agency-black.png" width="80" height="50"
                 alt="Web2Risk"></a>
-        <!------------- MENU navigation------------------ -->
+        <!-- MENU navigation -->
         <details>
             <summary aria-label="Open menu"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
                     viewBox="0 0 24 24">
@@ -22,11 +22,11 @@
                         stroke-width="1.5" d="M3 6.001h18m-18 6h18m-18 6h18" />
                 </svg>
             </summary>
-            <nav>
+            <nav aria-label="Main menu">
                 <ul>
                     <li><a href="#presentation">About</a></li>
                     <li><a href="#services">Services</a></li>
-                    <li><a href="#equipe">Team</a></li>
+                    <li><a href="#team">Team</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -34,7 +34,7 @@
         </details>
     </header>
     <main>
-        <!-- Grand titre phrase d'accroche -->
+        <!-- Main title and tagline -->
         <section class="hero">
             <h1>
                 <img src="./asset/image/logo/web-2-risk-web-agency-white.png" alt="Web2Risk Agency" width="200"
@@ -46,34 +46,36 @@
         <section id="presentation">
             <h2>About us</h2>
 
-            <article class="about-card">
-                <img src="./asset/image/misc/presentation-txt1.jpg" alt="Workstation with a laptop and a notebook"
-                    width="400" height="400" loading="lazy">
-                <h3>Who we are</h3>
-                <p>Web2risk Agency is an innovative web agency specialising in the design and development of bespoke
-                    websites and web applications. Situated at the heart of digital transformation, our agency
-                    supports businesses in optimising their online presence by offering technological solutions
-                    tailored to their specific needs.</p>
-            </article>
+            <div class="about-grid">
+                <article class="about-card">
+                    <img src="./asset/image/misc/presentation-txt1.jpg" alt="Workstation with a laptop and a notebook"
+                        width="400" height="400" loading="lazy">
+                    <h3>Who we are</h3>
+                    <p>Web2risk Agency is an innovative web agency specialising in the design and development of bespoke
+                        websites and web applications. Situated at the heart of digital transformation, our agency
+                        supports businesses in optimising their online presence by offering technological solutions
+                        tailored to their specific needs.</p>
+                </article>
 
-            <article class="about-card">
-                <img src="./asset/image/misc/presentation-txt2.jpg"
-                    alt="Person designing a website with a laptop and sketches" width="400" height="400" loading="lazy">
-                <h3>Solutions for your ideas</h3>
-                <p>Our services encompass the entire digital creation process, from initial analysis to final
-                    deployment. Whether for a showcase site, an e-commerce platform, or a complex web application,
-                    Web2risk Agency guarantees efficient, secure, and scale.</p>
-            </article>
+                <article class="about-card">
+                    <img src="./asset/image/misc/presentation-txt2.jpg"
+                        alt="Person designing a website with a laptop and sketches" width="400" height="400" loading="lazy">
+                    <h3>Solutions for your ideas</h3>
+                    <p>Our services encompass the entire digital creation process, from initial analysis to final
+                        deployment. Whether for a showcase site, an e-commerce platform, or a complex web application,
+                        Web2risk Agency guarantees efficient, secure, and scale.</p>
+                </article>
 
-            <article class="about-card">
-                <img src="./asset/image/misc/presentation-txt3.jpg" alt="Two people collaborating on a web project"
-                    width="400" height="400" loading="lazy">
-                <h3>A team that listens</h3>
-                <p>Boasting a team of experienced developers and creative designers, Web2risk Agency places user
-                    experience at the heart of every project. With a collaborative and innovative approach, we transform
-                    our clients' ideas into tangible projects, optimised to enhance their visibility and digital growth.
-                </p>
-            </article>
+                <article class="about-card">
+                    <img src="./asset/image/misc/presentation-txt3.jpg" alt="Two people collaborating on a web project"
+                        width="400" height="400" loading="lazy">
+                    <h3>A team that listens</h3>
+                    <p>Boasting a team of experienced developers and creative designers, Web2risk Agency places user
+                        experience at the heart of every project. With a collaborative and innovative approach, we transform
+                        our clients' ideas into tangible projects, optimised to enhance their visibility and digital growth.
+                    </p>
+                </article>
+            </div>
         </section>
         <section id="services">
 
@@ -110,7 +112,7 @@
             </div>
         </section>
 
-        <section id="equipe">
+        <section id="team">
 
             <h2>Our team</h2>
             <p>The team at Web2risk Agency is made up of passionate and complementary professionals: front-end and
@@ -165,8 +167,8 @@
                 <fieldset>
                     <legend>Get in touch</legend>
 
-                    <label for="nom">Name</label>
-                    <input type="text" id="nom" name="nom" placeholder="Name" autocomplete="name" required>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Name" autocomplete="name" required>
 
                     <label for="email">Email</label>
                     <input type="email" id="email" name="email" placeholder="example@email.com" autocomplete="email"
@@ -181,11 +183,11 @@
         </section>
     </main>
     <footer>
-        <nav>
+        <nav aria-label="Footer menu">
             <ul>
                 <li><a href="#presentation">About</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#equipe">Team</a></li>
+                <li><a href="#team">Team</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
