@@ -1,0 +1,262 @@
+/*-------------------------------------------------------------------------------- Header ----------------------*/
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 1rem;
+    background: var(--white);
+    box-shadow: 0 1px 4px rgb(49 54 56 / .15);
+}
+
+.header__img {
+    width: 80px;
+}
+
+.header__burger {
+    list-style: none;
+    cursor: pointer;
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.header__burger::-webkit-details-marker {
+    display: none;
+}
+
+/*-------------------------------------------------------------------------------- Nav ----------------------*/
+
+.nav__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav__link {
+    text-decoration: none;
+}
+
+.nav__link:hover,
+.nav__link:focus-visible {
+    color: var(--school-bus-yellow);
+}
+
+/* menu déroulant mobile */
+.nav--header {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--onyx);
+}
+
+.nav--header .nav__link {
+    display: block;
+    padding: 1rem;
+    color: var(--white);
+}
+
+.nav--footer .nav__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+/*-------------------------------------------------------------------------------- Hero ----------------------*/
+
+.hero {
+    display: grid;
+    place-items: center;
+    min-height: 70vh;
+    padding: 2rem 1rem;
+    background: var(--onyx);
+    color: var(--white);
+    text-align: center;
+}
+
+.hero__title {
+    margin: 0;
+}
+
+.hero__logo {
+    width: min(70vw, 400px);
+    margin: 0 auto 2rem;
+}
+
+.hero__tagline {
+    display: block;
+    font-size: clamp(1.5rem, 5vw, 3rem);
+}
+
+/*-------------------------------------------------------------------------------- Section ----------------------*/
+
+.section {
+    padding-block: 2rem;
+}
+
+/* couleurs de fond par section */
+.section--blue {
+    background: var(--air-force-blue);
+    color: var(--white);
+}
+
+.section--yellow {
+    background: var(--school-bus-yellow);
+    color: var(--onyx);
+}
+
+/* titre : bandeau sombre centré en mobile */
+.section__title {
+    width: fit-content;
+    margin: 0 auto 2rem;
+    padding: .3rem 2rem;
+    background: var(--onyx);
+    color: var(--white);
+    font-size: 1.25rem;
+}
+
+.section__intro {
+    max-width: 70ch;
+    margin: 0 auto 2rem;
+    padding-inline: 1rem;
+}
+
+.section__grid {
+    display: grid;
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin-inline: auto;
+    padding-inline: 1rem;
+}
+
+/*-------------------------------------------------------------------------------- Form ----------------------*/
+
+.form {
+    max-width: 600px;
+    margin-inline: auto;
+    padding-inline: 1rem;
+}
+
+.form__fieldset {
+    display: grid;
+    gap: .5rem;
+    padding: 1.5rem;
+    border: 2px solid var(--air-force-blue);
+    border-radius: 8px;
+}
+
+.form__legend {
+    padding-inline: .5rem;
+    font-family: "space-grotesk", sans-serif;
+    font-weight: 600;
+}
+
+.form__label:not(:first-of-type) {
+    margin-top: .5rem;
+}
+
+.form__input {
+    padding: .6rem;
+    border: 1px solid var(--air-force-blue);
+    border-radius: 4px;
+    font: inherit;
+}
+
+.form__input:focus {
+    outline: 2px solid var(--sky-blue);
+}
+
+.form__input--textarea {
+    resize: vertical;
+}
+
+.form__button {
+    justify-self: start;
+    margin-top: 1rem;
+    padding: .6rem 2rem;
+    border: none;
+    border-radius: 4px;
+    background: var(--school-bus-yellow);
+    color: var(--onyx);
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.form__button:hover,
+.form__button:focus-visible {
+    background: var(--onyx);
+    color: var(--school-bus-yellow);
+}
+
+/*-------------------------------------------------------------------------------- Footer ----------------------*/
+
+.footer {
+    padding: 2rem 1rem;
+    background: var(--onyx);
+    color: var(--white);
+    text-align: center;
+}
+
+/*-------------------------------------------------------------------------------- Desktop ----------------------*/
+
+@media (min-width: 768px) {
+
+    /* menu toujours visible, burger caché */
+    .header__burger {
+        display: none;
+    }
+
+    .header__menu::details-content {
+        content-visibility: visible;
+        display: contents;
+    }
+
+    .nav--header {
+        position: static;
+        background: none;
+    }
+
+    .nav--header .nav__list {
+        display: flex;
+        gap: 2rem;
+    }
+
+    .nav--header .nav__link {
+        padding: 0;
+        color: var(--onyx);
+    }
+
+    .nav--header .nav__link:hover,
+    .nav--header .nav__link:focus-visible {
+        color: var(--air-force-blue);
+    }
+
+    .hero__tagline {
+        max-width: 20ch;
+        margin-inline: auto;
+    }
+
+    /* titre : simple, aligné à gauche */
+    .section__title {
+        width: auto;
+        max-width: 1200px;
+        padding: 0 1rem;
+        background: none;
+        color: inherit; /* prend la couleur de texte de la section */
+        font-size: 1.75rem;
+    }
+
+    /* intro : même largeur que le titre et la grille */
+    .section__intro {
+        max-width: 1200px;
+    }
+
+    .section__grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

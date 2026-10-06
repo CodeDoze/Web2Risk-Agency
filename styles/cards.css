@@ -1,0 +1,134 @@
+/*-------------------------------------------------------------------------------- Card : base commune ----------------------*/
+
+.card {
+    overflow: clip; /* et non hidden : sinon aspect-ratio coupe le texte au lieu d'agrandir la carte */
+    border-radius: 8px;
+}
+
+.card__img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.card__title {
+    margin-top: 0;
+}
+
+/*-------------------------------------------------------------------------------- card--about : image en fond ----------------------*/
+
+.card--about {
+    position: relative;
+    isolation: isolate;
+    min-height: 12rem;
+    padding: 1.5rem;
+    color: var(--white);
+}
+
+.card--about .card__img {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    z-index: -1;
+}
+
+/* voile sombre pour la lisibilité du texte */
+.card--about::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(rgb(49 54 56 / .4), rgb(49 54 56 / .9));
+    z-index: -1;
+}
+
+/*-------------------------------------------------------------------------------- card--service : image à gauche (mobile) ----------------------*/
+
+.card--service {
+    display: grid;
+    grid-template-columns: 40% 1fr;
+    align-content: start;
+    background: var(--onyx);
+    color: var(--white);
+}
+
+.card--service .card__img {
+    grid-row: span 2;
+    height: 100%;
+}
+
+.card--service .card__title,
+.card--service .card__text {
+    margin: 0;
+    padding: 1rem 1rem 0;
+}
+
+.card--service .card__text {
+    padding-bottom: 1rem;
+    font-size: .9rem;
+}
+
+/*-------------------------------------------------------------------------------- card--team ----------------------*/
+
+.card--team {
+    background: var(--white);
+    box-shadow: 0 2px 8px rgb(49 54 56 / .15);
+}
+
+.card--team .card__img {
+    aspect-ratio: 1;
+}
+
+.card--team .card__title {
+    margin-top: 1rem;
+}
+
+.card--team .card__title,
+.card--team .card__role,
+.card--team .card__text {
+    padding-inline: 1rem;
+}
+
+.card__role {
+    margin-top: -.5rem;
+    color: var(--air-force-blue);
+    font-weight: 600;
+}
+
+/*-------------------------------------------------------------------------------- Desktop ----------------------*/
+
+@media (min-width: 768px) {
+
+    /* about et service : image en fond, format de la maquette 418×731 */
+    .card--about,
+    .card--service {
+        position: relative;
+        isolation: isolate;
+        display: block;
+        aspect-ratio: 4 / 7;
+        padding: 1.5rem;
+        background: none;
+        color: var(--white);
+    }
+
+    .card--service .card__img {
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+    }
+
+    .card--service::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(rgb(49 54 56 / .4), rgb(49 54 56 / .9));
+        z-index: -1;
+    }
+
+    .card--service .card__title,
+    .card--service .card__text {
+        padding: 0;
+    }
+
+    .card--service .card__text {
+        margin-top: 1rem;
+    }
+}

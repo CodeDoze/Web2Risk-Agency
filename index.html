@@ -9,25 +9,25 @@
 </head>
 
 <body>
-    <header>
+    <header class="header">
         <!-- logo: back to home -->
-        <a href="index.html"><img src="asset/image/logo/web-2-risk-web-agency-black.png" width="80" height="50"
+        <a class="header__logo" href="index.html"><img class="header__img" src="asset/image/logo/web-2-risk-web-agency-black.png" width="80" height="50"
                 alt="Web2Risk"></a>
         <!-- MENU navigation -->
-        <details>
-            <summary aria-label="Open menu"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+        <details class="header__menu">
+            <summary class="header__burger" aria-label="Open menu"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
                     viewBox="0 0 24 24">
                     <path d="M0 0h24v24H0z" fill="none" />
                     <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                         stroke-width="1.5" d="M3 6.001h18m-18 6h18m-18 6h18" />
                 </svg>
             </summary>
-            <nav aria-label="Main menu">
-                <ul>
-                    <li><a href="#presentation">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#team">Team</a></li>
-                    <li><a href="#contact">Contact</a></li>
+            <nav class="nav nav--header" aria-label="Main menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a class="nav__link" href="#presentation">About</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#services">Services</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#team">Team</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#contact">Contact</a></li>
                 </ul>
             </nav>
 
@@ -36,110 +36,110 @@
     <main>
         <!-- Main title and tagline -->
         <section class="hero">
-            <h1>
-                <img src="./asset/image/logo/web-2-risk-web-agency-white.png" alt="Web2Risk Agency" width="200"
+            <h1 class="hero__title">
+                <img class="hero__logo" src="./asset/image/logo/web-2-risk-web-agency-white.png" alt="Web2Risk Agency" width="200"
                     height="100">
-                <span>Custom website and web application development</span>
+                <span class="hero__tagline">Custom website and web application development</span>
             </h1>
         </section>
 
-        <section id="presentation">
-            <h2>About us</h2>
+        <section class="section" id="presentation">
+            <h2 class="section__title">About us</h2>
 
-            <div class="about-grid">
-                <article class="about-card">
-                    <img src="./asset/image/misc/presentation-txt1.jpg" alt="Workstation with a laptop and a notebook"
+            <div class="section__grid">
+                <article class="card card--about">
+                    <img class="card__img" src="./asset/image/misc/presentation-txt1.jpg" alt="Workstation with a laptop and a notebook"
                         width="400" height="400" loading="lazy">
-                    <h3>Who we are</h3>
-                    <p>Web2risk Agency is an innovative web agency specialising in the design and development of bespoke
+                    <h3 class="card__title">Who we are</h3>
+                    <p class="card__text">Web2risk Agency is an innovative web agency specialising in the design and development of bespoke
                         websites and web applications. Situated at the heart of digital transformation, our agency
                         supports businesses in optimising their online presence by offering technological solutions
                         tailored to their specific needs.</p>
                 </article>
 
-                <article class="about-card">
-                    <img src="./asset/image/misc/presentation-txt2.jpg"
+                <article class="card card--about">
+                    <img class="card__img" src="./asset/image/misc/presentation-txt2.jpg"
                         alt="Person designing a website with a laptop and sketches" width="400" height="400" loading="lazy">
-                    <h3>Solutions for your ideas</h3>
-                    <p>Our services encompass the entire digital creation process, from initial analysis to final
+                    <h3 class="card__title">Solutions for your ideas</h3>
+                    <p class="card__text">Our services encompass the entire digital creation process, from initial analysis to final
                         deployment. Whether for a showcase site, an e-commerce platform, or a complex web application,
                         Web2risk Agency guarantees efficient, secure, and scale.</p>
                 </article>
 
-                <article class="about-card">
-                    <img src="./asset/image/misc/presentation-txt3.jpg" alt="Two people collaborating on a web project"
+                <article class="card card--about">
+                    <img class="card__img" src="./asset/image/misc/presentation-txt3.jpg" alt="Two people collaborating on a web project"
                         width="400" height="400" loading="lazy">
-                    <h3>A team that listens</h3>
-                    <p>Boasting a team of experienced developers and creative designers, Web2risk Agency places user
+                    <h3 class="card__title">A team that listens</h3>
+                    <p class="card__text">Boasting a team of experienced developers and creative designers, Web2risk Agency places user
                         experience at the heart of every project. With a collaborative and innovative approach, we transform
                         our clients' ideas into tangible projects, optimised to enhance their visibility and digital growth.
                     </p>
                 </article>
             </div>
         </section>
-        <section id="services">
+        <section class="section section--blue" id="services">
 
-            <h2>Our services</h2>
+            <h2 class="section__title">Our services</h2>
 
-            <div class="services-grid">
-                <article class="service-card">
-                    <img src="./asset/image/misc/pexels-monoar-rahman-22660-114907.jpg"
+            <div class="section__grid">
+                <article class="card card--service">
+                    <img class="card__img" src="./asset/image/misc/pexels-monoar-rahman-22660-114907.jpg"
                         alt="Laptop displaying a website on a wooden table" width="400" height="400" loading="lazy">
-                    <h3>Custom website development</h3>
-                    <p>Creation of unique and optimised websites, adaptable to all devices, to ensure an engaging
+                    <h3 class="card__title">Custom website development</h3>
+                    <p class="card__text">Creation of unique and optimised websites, adaptable to all devices, to ensure an engaging
                         and modern
                         user experience.</p>
                 </article>
 
-                <article class="service-card">
-                    <img src="./asset/image/misc/pexels-negativespace-160107.jpg"
+                <article class="card card--service">
+                    <img class="card__img" src="./asset/image/misc/pexels-negativespace-160107.jpg"
                         alt="Code displayed on a laptop screen" width="400" height="400" loading="lazy">
-                    <h3>Interactive web applications</h3>
-                    <p>Design of high-performing and intuitive web applications, incorporating the latest
+                    <h3 class="card__title">Interactive web applications</h3>
+                    <p class="card__text">Design of high-performing and intuitive web applications, incorporating the latest
                         technologies to
                         meet the specific needs of each client.</p>
                 </article>
 
-                <article class="service-card">
-                    <img src="./asset/image/misc/pexels-pixabay-270637.jpg"
+                <article class="card card--service">
+                    <img class="card__img" src="./asset/image/misc/pexels-pixabay-270637.jpg"
                         alt="Letters S, E and O as game tiles on a wooden table" width="400" height="400"
                         loading="lazy">
-                    <h3>SEO optimisation and performance analysis</h3>
-                    <p>Enhancement of search engine ranking and performance monitoring to maximise the visibility
+                    <h3 class="card__title">SEO optimisation and performance analysis</h3>
+                    <p class="card__text">Enhancement of search engine ranking and performance monitoring to maximise the visibility
                         and impact
                         of websites and applications on search engines.</p>
                 </article>
             </div>
         </section>
 
-        <section id="team">
+        <section class="section section--yellow" id="team">
 
-            <h2>Our team</h2>
-            <p>The team at Web2risk Agency is made up of passionate and complementary professionals: front-end and
+            <h2 class="section__title">Our team</h2>
+            <p class="section__intro">The team at Web2risk Agency is made up of passionate and complementary professionals: front-end and
                 back-end developers, UX/UI designers, SEO experts, and dedicated project managers. Each individual
                 contributes their expertise to ensure effective and creative solutions, while maintaining a smooth and
                 efficient collaboration. Together, they strive to transform clients' ideas into memorable and bespoke
                 digital experiences.</p>
 
-            <div class="team-grid">
-                <article class="team-card">
-                    <img src="./asset/image/equipe/lucas.jpg" alt="Portrait of Lucas" width="400" height="400"
+            <div class="section__grid">
+                <article class="card card--team">
+                    <img class="card__img" src="./asset/image/equipe/lucas.jpg" alt="Portrait of Lucas" width="400" height="400"
                         loading="lazy">
-                    <h3>Lucas</h3>
-                    <p class="role">Front-End Developer, specialist in seamless interfaces.</p>
-                    <p>A technology enthusiast, Lucas is an expert in JavaScript and modern frameworks such as React and
+                    <h3 class="card__title">Lucas</h3>
+                    <p class="card__role">Front-End Developer, specialist in seamless interfaces.</p>
+                    <p class="card__text">A technology enthusiast, Lucas is an expert in JavaScript and modern frameworks such as React and
                         Vue.js. Always on the lookout for the latest trends, he ensures a smooth and responsive
                         interface,
                         with a focus on accessibility and user experience. A great fan of minimalist design, he enjoys
                         creating interfaces that are both aesthetically pleasing and functional.</p>
                 </article>
 
-                <article class="team-card">
-                    <img src="./asset/image/equipe/emma.jpg" alt="Portrait of Emma" width="400" height="400"
+                <article class="card card--team">
+                    <img class="card__img" src="./asset/image/equipe/emma.jpg" alt="Portrait of Emma" width="400" height="400"
                         loading="lazy">
-                    <h3>Emma</h3>
-                    <p class="role">Digital project manager, ensuring the success of your projects.</p>
-                    <p>With several years of experience in web project management, Emma serves as the link between the
+                    <h3 class="card__title">Emma</h3>
+                    <p class="card__role">Digital project manager, ensuring the success of your projects.</p>
+                    <p class="card__text">With several years of experience in web project management, Emma serves as the link between the
                         technical team and the clients. Organised and meticulous, she ensures that each stage of the
                         project
                         adheres to the budget and timelines, while also meeting the clients' needs. Possessing a keen
@@ -147,12 +147,12 @@
                     </p>
                 </article>
 
-                <article class="team-card">
-                    <img src="./asset/image/equipe/sofia.jpg" alt="Portrait of Sofia" width="400" height="400"
+                <article class="card card--team">
+                    <img class="card__img" src="./asset/image/equipe/sofia.jpg" alt="Portrait of Sofia" width="400" height="400"
                         loading="lazy">
-                    <h3>Sofia</h3>
-                    <p class="role">SEO expert, your ally in maximising your visibility.</p>
-                    <p>With solid expertise in organic search, Sofia is adept at using data analysis tools to
+                    <h3 class="card__title">Sofia</h3>
+                    <p class="card__role">SEO expert, your ally in maximising your visibility.</p>
+                    <p class="card__text">With solid expertise in organic search, Sofia is adept at using data analysis tools to
                         maximise the visibility of projects. She conducts thorough SEO audits and identifies the best
                         strategies to ensure each site achieves optimal positioning. Passionate about numbers and user
                         behaviour, she constantly adjusts her recommendations to enhance performance.</p>
@@ -161,37 +161,37 @@
 
         </section>
 
-        <section id="contact">
-            <h2>Contact</h2>
-            <form action="contact.php" method="post">
-                <fieldset>
-                    <legend>Get in touch</legend>
+        <section class="section" id="contact">
+            <h2 class="section__title">Contact</h2>
+            <form class="form" action="contact.php" method="post">
+                <fieldset class="form__fieldset">
+                    <legend class="form__legend">Get in touch</legend>
 
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" placeholder="Name" autocomplete="name" required>
+                    <label class="form__label" for="name">Name</label>
+                    <input class="form__input" type="text" id="name" name="name" placeholder="Name" autocomplete="name" required>
 
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="example@email.com" autocomplete="email"
+                    <label class="form__label" for="email">Email</label>
+                    <input class="form__input" type="email" id="email" name="email" placeholder="example@email.com" autocomplete="email"
                         required>
 
-                    <label for="message">Your message</label>
-                    <textarea id="message" name="message" rows="10" placeholder="Your message" required></textarea>
+                    <label class="form__label" for="message">Your message</label>
+                    <textarea class="form__input form__input--textarea" id="message" name="message" rows="10" placeholder="Your message" required></textarea>
 
-                    <button type="submit">Send</button>
+                    <button class="form__button" type="submit">Send</button>
                 </fieldset>
             </form>
         </section>
     </main>
-    <footer>
-        <nav aria-label="Footer menu">
-            <ul>
-                <li><a href="#presentation">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#team">Team</a></li>
-                <li><a href="#contact">Contact</a></li>
+    <footer class="footer">
+        <nav class="nav nav--footer" aria-label="Footer menu">
+            <ul class="nav__list">
+                <li class="nav__item"><a class="nav__link" href="#presentation">About</a></li>
+                <li class="nav__item"><a class="nav__link" href="#services">Services</a></li>
+                <li class="nav__item"><a class="nav__link" href="#team">Team</a></li>
+                <li class="nav__item"><a class="nav__link" href="#contact">Contact</a></li>
             </ul>
         </nav>
-        <p>&copy; 2026 Web2Risk Agency. All rights reserved.</p>
+        <p class="footer__copyright">&copy; 2026 Web2Risk Agency. All rights reserved.</p>
     </footer>
 
 </body>

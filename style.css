@@ -2,4 +2,37 @@
 @import url("styles/colors.css");
 @import url("styles/layouts.css");
 @import url("styles/cards.css");
-body{}
+
+/*-------------------------------------------------------------------------------- Base ----------------------*/
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "open-sans", sans-serif;
+    line-height: 1.5;
+    color: var(--onyx);
+    background: var(--white);
+}
+
+h1,
+h2,
+h3 {
+    font-family: "space-grotesk", sans-serif;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: inherit;
+}
