@@ -45,7 +45,7 @@
 }
 
 /* menu déroulant mobile */
-.nav--header {
+.nav--header .nav__list {
     position: absolute;
     top: 100%;
     left: 0;
@@ -216,12 +216,9 @@
         display: contents;
     }
 
-    .nav--header {
+    .nav--header .nav__list {
         position: static;
         background: none;
-    }
-
-    .nav--header .nav__list {
         display: flex;
         gap: 2rem;
     }
@@ -258,5 +255,10 @@
 
     .section__grid {
         grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* grille en une colonne : cartes l'une au-dessus de l'autre */
+    .section__grid--stack {
+        grid-template-columns: 1fr;
     }
 }

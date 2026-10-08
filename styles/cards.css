@@ -97,38 +97,13 @@
 
 @media (min-width: 768px) {
 
-    /* about et service : image en fond, format de la maquette 418×731 */
-    .card--about,
-    .card--service {
-        position: relative;
-        isolation: isolate;
-        display: block;
+    /* about : image en fond, format de la maquette 418×731 */
+    .card--about {
+        display: flex;
+        flex-direction: column;    /* titre au-dessus du texte */
+        justify-content: flex-end; /* le tout poussé en bas de la carte */
         aspect-ratio: 4 / 7;
-        padding: 1.5rem;
-        background: none;
-        color: var(--white);
     }
 
-    .card--service .card__img {
-        position: absolute;
-        inset: 0;
-        z-index: -1;
-    }
-
-    .card--service::after {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(rgb(49 54 56 / .4), rgb(49 54 56 / .9));
-        z-index: -1;
-    }
-
-    .card--service .card__title,
-    .card--service .card__text {
-        padding: 0;
-    }
-
-    .card--service .card__text {
-        margin-top: 1rem;
-    }
+    /* service : pas de surcharge, garde le design mobile (image à gauche) */
 }
