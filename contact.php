@@ -1,10 +1,4 @@
 <?php
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
-
-require 'vendor/autoload.php';
-$config = require 'config.php';
-
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     header('Location: index.html');
     exit;
@@ -28,27 +22,17 @@ if ($name === '' || !$email || $message === '') {
 // empêche l'injection d'en-têtes dans le nom
 $name = str_replace(["\r", "\n"], ' ', $name);
 
-try {
-    $mail = new PHPMailer(true);
-    $mail->isSMTP();
-    $mail->Host       = $config['host'];
-    $mail->SMTPAuth   = $config['username'] !== '';
-    $mail->Username   = $config['username'];
-    $mail->Password   = $config['password'];
-    $mail->SMTPSecure = $config['username'] !== '' ? PHPMailer::ENCRYPTION_STARTTLS : '';
-    $mail->SMTPAutoTLS = $config['username'] !== '';
-    $mail->Port       = $config['port'];
-    $mail->CharSet    = 'UTF-8';
+$to      = getenv('MAIL_TO') ?: 'contact@web2risk.local';
+$subject = mb_encode_mimeheader("New message from $name", 'UTF-8');
+$body    = "Name: $name\nEmail: $email\n\n$message";
+$headers = implode("\r\n", [
+    'From: Web2Risk Website <website@web2risk.local>',
+    'Reply-To: ' . mb_encode_mimeheader($name, 'UTF-8') . " <$email>",
+    'Content-Type: text/plain; charset=UTF-8',
+]);
 
-    $mail->setFrom($config['from'], 'Web2Risk Website');
-    $mail->addAddress($config['to']);
-    $mail->addReplyTo($email, $name);
-
-    $mail->Subject = "New message from $name";
-    $mail->Body    = "Name: $name\nEmail: $email\n\n$message";
-
-    $mail->send();
+if (mail($to, $subject, $body, $headers)) {
     header('Location: index.html?mail=sent#contact');
-} catch (Exception $e) {
+} else {
     header('Location: index.html?mail=error#contact');
 }
