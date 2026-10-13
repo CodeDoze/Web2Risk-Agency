@@ -16,7 +16,7 @@
     width: 80px;
 }
 
-.header__burger {
+.menu-burger {
     padding: 0;
     border: 0;
     background: none;
@@ -59,7 +59,7 @@
     color: var(--white);
 }
 
-.header__burger[aria-expanded="true"]+.nav__list {
+.menu-burger[aria-expanded="true"]+.nav__list {
     display: block;
 }
 
@@ -225,7 +225,7 @@
 @media (min-width: 768px) {
 
     /* menu toujours visible, burger caché */
-    .header__burger {
+    .menu-burger {
         display: none;
     }
 

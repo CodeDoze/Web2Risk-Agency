@@ -1,5 +1,5 @@
 // menu burger : ouverture, fermeture après un clic sur un lien, fermeture avec Échap
-const burger = document.querySelector('.header__burger');
+const burger = document.querySelector('.menu-burger');
 const menu = document.querySelector('#main-menu');
 
 function setMenu(open) {
