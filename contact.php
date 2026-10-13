@@ -32,14 +32,15 @@ try {
     $mail = new PHPMailer(true);
     $mail->isSMTP();
     $mail->Host       = $config['host'];
-    $mail->SMTPAuth   = true;
+    $mail->SMTPAuth   = $config['username'] !== '';
     $mail->Username   = $config['username'];
     $mail->Password   = $config['password'];
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+    $mail->SMTPSecure = $config['username'] !== '' ? PHPMailer::ENCRYPTION_STARTTLS : '';
+    $mail->SMTPAutoTLS = $config['username'] !== '';
     $mail->Port       = $config['port'];
     $mail->CharSet    = 'UTF-8';
 
-    $mail->setFrom($config['username'], 'Web2Risk Website');
+    $mail->setFrom($config['from'], 'Web2Risk Website');
     $mail->addAddress($config['to']);
     $mail->addReplyTo($email, $name);
 
